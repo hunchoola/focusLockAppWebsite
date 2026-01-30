@@ -130,6 +130,17 @@
             color: #4fd1c5;
         }
 
+        .new-pill {
+            background-color: #e53e3e;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -238,6 +249,87 @@
             font-size: 0.95rem;
         }
 
+        /* --- NEW AI SHOWCASE SECTION --- */
+        .ai-showcase {
+            background: #1a202c;
+            color: white;
+            padding: 100px 20px;
+            overflow: hidden;
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .ai-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #4fd1c5, #63b3ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ai-text p {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            margin-bottom: 30px;
+        }
+
+        .chat-simulation {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .chat-bubble {
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            max-width: 85%;
+            font-size: 0.95rem;
+        }
+
+        .chat-user {
+            background: #2d3748;
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-ai {
+            background: var(--primary);
+            color: white;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .bot-avatar {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
         /* --- Screenshots Section --- */
         .screenshots {
             padding: 100px 20px;
@@ -333,7 +425,9 @@
                 display: none;
             }
 
-            /* Hide text on very small screens if needed */
+            .ai-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -356,12 +450,13 @@
                     <path
                         d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1527-.5676.416.416 0 00-.5676.1527l-2.0225 3.503c-1.6662-.7566-3.5292-1.1837-5.5037-1.1837-1.9392 0-3.7719.4121-5.4217 1.1466l-2.0287-3.5133a.4158.4158 0 00-.5676-.1527.416.416 0 00-.1527.5676l2.0244 3.506C2.696 11.0965.8672 14.5693.8672 18.525c0 .0928.0754.1685.1685.1685h21.9287c.0931 0 .1685-.0757.1685-.1685 0-3.9942-1.8596-7.4952-5.2514-9.2066" />
                 </svg>
-                Available for Android
+                Available for Android <span class="new-pill">V1.7</span>
             </div>
 
             <h1>Master Your Attention</h1>
-            <p>Block distracting apps, track your attempts, and regain your focus instantly. The ultimate productivity
-                tool for students and professionals.</p>
+            <p>Block distracting apps, chat with your AI Coach, and regain your focus instantly. The ultimate
+                productivity
+                tool.</p>
 
             <a href="https://play.google.com/store/apps/details?id=com.focuslockapp.myapplication" class="cta-button">
                 Download for Android
@@ -381,6 +476,13 @@
             </div>
 
             <div class="feature-grid">
+                <div class="feature-card" style="border: 2px solid #4fd1c5;">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Focus Coach <span class="new-pill">NEW</span></h3>
+                    <p>Chat with a ruthless AI that analyzes your distractions and gives you tough love to get back to
+                        work.</p>
+                </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
                     <h3>Instant Blocking</h3>
@@ -390,7 +492,7 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>Accountability Counter</h3>
+                    <h3>Accountability</h3>
                     <p>We track exactly how many times you try to open blocked apps. Challenge yourself to lower that
                         number.</p>
                 </div>
@@ -401,26 +503,40 @@
                     <p>Automate your discipline. Set "Work Hours" (e.g., 9-5) and Focus Lock will automatically guard
                         your time.</p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🌙</div>
-                    <h3>Dark Mode</h3>
-                    <p>Fully optimized for night owls. The interface adapts to your system theme for late-night study
-                        sessions.</p>
+    <section class="ai-showcase">
+        <div class="container">
+            <div class="ai-grid">
+                <div class="ai-text">
+                    <h2>Meet Your Ruthless<br>AI Accountability Partner.</h2>
+                    <p>Most blockers just say "No." Ours tells you <strong>why</strong>.</p>
+                    <p>Our new AI Coach connects with your habit data. If you try to open Instagram 5 times in an hour,
+                        it won't just block you—it will call you out.</p>
+                    <p>✅ <strong>Personalized Advice</strong><br>
+                        ✅ <strong>Streak Sharing</strong><br>
+                        ✅ <strong>Zero Excuses</strong></p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Battery Efficient</h3>
-                    <p>Built with native Android technology to run efficiently in the background without draining your
-                        battery.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Hard Lock Protocol</h3>
-                    <p>No loop-holes. When you try to open a blocked app, you are instantly redirected to safety. No
-                        excuses.</p>
+                <div class="chat-simulation">
+                    <div class="chat-header">
+                        <div class="bot-avatar">🤖</div>
+                        <div style="font-weight: bold; color: white;">Focus Coach</div>
+                    </div>
+                    <div class="chat-bubble chat-user">
+                        I just want to check TikTok for 5 minutes...
+                    </div>
+                    <div class="chat-bubble chat-ai">
+                        You said you wanted to finish that report. Do you want to be successful or do you want to watch
+                        cat videos? Get back to work.
+                    </div>
+                    <div class="chat-bubble chat-user">
+                        You're right. Back to work.
+                    </div>
+                    <div class="chat-bubble chat-ai">
+                        Good choice. I'm watching you. 🦁
+                    </div>
                 </div>
             </div>
         </div>
